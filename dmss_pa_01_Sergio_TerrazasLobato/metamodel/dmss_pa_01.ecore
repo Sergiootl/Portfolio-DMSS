@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dmss_pa_01" nsURI="http://www.example.org/dmss_pa_01" nsPrefix="dmss_pa_01">
+  <eAnnotations source="gmf"/>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="operationReflection" value="true"/>
+    <details key="tableProviders" value="true"/>
+    <details key="complianceLevel" value="6.0"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Universidad">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Nombre"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="titulosuniversitarios"
+        lowerBound="1" upperBound="-1" eType="#//TituloUniversitario" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alumnos" lowerBound="1"
+        upperBound="-1" eType="#//Alumno" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="profesores" lowerBound="1"
+        upperBound="-1" eType="#//Profesor" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TituloUniversitario">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Nombre"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="asignaturas" lowerBound="1"
+        upperBound="-1" eType="#//Asignatura" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Asignatura">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Nombre"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Codigo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bloques" lowerBound="1"
+        upperBound="-1" eType="#//Bloque" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="profesores" lowerBound="1"
+        upperBound="-1" eType="#//Profesor" eOpposite="#//Profesor/asignaturas">
+      <eAnnotations source="gmf.link">
+        <details key="source" value="Asignatura"/>
+        <details key="target" value="Profesor"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Ficha12a" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="grupostrabajo" upperBound="-1"
+        eType="#//GrupoTrabajo" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="escoordinada" eType="#//Profesor"
+        eOpposite="#//Profesor/escoordinador">
+      <eAnnotations source="gmf.link">
+        <details key="source" value="Asignatura"/>
+        <details key="target" value="Profesor"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Profesor">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Nombre"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="asignaturas" upperBound="-1"
+        eType="#//Asignatura" eOpposite="#//Asignatura/profesores">
+      <eAnnotations source="gmf.link">
+        <details key="source" value="Profesor"/>
+        <details key="target" value="Asignatura"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="escoordinador" eType="#//Asignatura"
+        eOpposite="#//Asignatura/escoordinada">
+      <eAnnotations source="gmf.link">
+        <details key="source" value="Profesor"/>
+        <details key="target" value="Asignatura"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Alumno">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Nombre"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="matriculadoenTU" lowerBound="1"
+        upperBound="-1" eType="#//TituloUniversitario">
+      <eAnnotations source="gmf.link">
+        <details key="source" value="Alumno"/>
+        <details key="target" value="TituloUniversitario"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="matriculadoenASIG" upperBound="-1"
+        eType="#//Asignatura">
+      <eAnnotations source="gmf.link">
+        <details key="source" value="Alumno"/>
+        <details key="target" value="Asignatura"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gruposdetrabajo" upperBound="-1"
+        eType="#//GrupoTrabajo" eOpposite="#//GrupoTrabajo/alumnosGT">
+      <eAnnotations source="gmf.link">
+        <details key="source" value="Alumno"/>
+        <details key="target" value="GrupoTrabajo"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bloque">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Nombre"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actividades" lowerBound="1"
+        upperBound="-1" eType="#//Actividad" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Actividad" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Descripcion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Visible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Encuesta" eSuperTypes="#//Actividad">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Descripcion"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Consulta" eSuperTypes="#//Actividad">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Descripcion"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tarea" eSuperTypes="#//Actividad">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Descripcion"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NumMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="FechaLimite" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Calificacion" eType="#//NOTA"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ENLACEURL" eSuperTypes="#//Actividad">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Descripcion"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Foro" eSuperTypes="#//Actividad">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Descripcion"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="preguntas" upperBound="-1"
+        eType="#//Pregunta" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Recurso" eSuperTypes="#//Actividad">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Extension"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Extension" eType="#//TIPO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="NOTA">
+    <eLiterals name="ESCALA5" value="1"/>
+    <eLiterals name="ESCALA2" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TIPO">
+    <eLiterals name="PDF"/>
+    <eLiterals name="WORD" value="1"/>
+    <eLiterals name="ODT" value="2"/>
+    <eLiterals name="ODP" value="3"/>
+    <eLiterals name="AVI" value="4"/>
+    <eLiterals name="MP4" value="5"/>
+    <eLiterals name="PPT" value="6"/>
+    <eLiterals name="UNDEFINED" value="7"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GrupoTrabajo">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Descripcion"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Descripcion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Numgrupos" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NumMinEstu" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NumMaxEstu" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alumnosGT" lowerBound="1"
+        upperBound="-1" eType="#//Alumno" eOpposite="#//Alumno/gruposdetrabajo">
+      <eAnnotations source="gmf.link">
+        <details key="source" value="GrupoTrabajo"/>
+        <details key="target" value="Alumno"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actividadobligatoria" upperBound="-1"
+        eType="#//Actividad">
+      <eAnnotations source="gmf.link">
+        <details key="source" value="GrupoTrabajo"/>
+        <details key="target" value="Actividad"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pregunta">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Texto"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="respuestas" upperBound="-1"
+        eType="#//Respuesta" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Texto" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Respuesta">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Texto"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="respuestaanidada" upperBound="-1"
+        eType="#//Respuesta" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Texto" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Root">
+    <eAnnotations source="gmf.diagram"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="universidad" upperBound="-1"
+        eType="#//Universidad" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

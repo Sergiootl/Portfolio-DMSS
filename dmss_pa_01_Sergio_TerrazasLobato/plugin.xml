@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dmss_pa_01 -->
+      <package
+            uri="http://www.example.org/dmss_pa_01"
+            class="dmss_pa_01.Dmss_pa_01Package"/>
+   </extension>
+
+</plugin>

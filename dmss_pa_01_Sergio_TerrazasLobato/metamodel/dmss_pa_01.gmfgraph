@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="dmss_pa_01">
+  <figures name="Default">
+    <descriptors name="UniversidadFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="UniversidadFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="UniversidadLabelFigure" text="Universidad">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="UniversidadTitulosuniversitariosCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="UniversidadAlumnosCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="UniversidadProfesoresCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureUniversidadLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+      <accessors accessor="getUniversidadTitulosuniversitariosCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+      <accessors accessor="getUniversidadAlumnosCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.2"/>
+      <accessors accessor="getUniversidadProfesoresCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.3"/>
+    </descriptors>
+    <descriptors name="TituloUniversitarioFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TituloUniversitarioFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="TituloUniversitarioLabelFigure" text="TituloUniversitario">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="TituloUniversitarioAsignaturasCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureTituloUniversitarioLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+      <accessors accessor="getTituloUniversitarioAsignaturasCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="AsignaturaFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="AsignaturaFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="AsignaturaLabelFigure" text="Asignatura">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="AsignaturaBloquesCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="AsignaturaGrupostrabajoCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureAsignaturaLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+      <accessors accessor="getAsignaturaBloquesCompartmentFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
+      <accessors accessor="getAsignaturaGrupostrabajoCompartmentFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="ProfesorFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ProfesorFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ProfesorLabelFigure" text="Profesor"/>
+      </actualFigure>
+      <accessors accessor="getFigureProfesorLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="AlumnoFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="AlumnoFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="AlumnoLabelFigure" text="Alumno"/>
+      </actualFigure>
+      <accessors accessor="getFigureAlumnoLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="BloqueFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="BloqueFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="BloqueLabelFigure" text="Bloque">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="BloqueActividadesCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureBloqueLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+      <accessors accessor="getBloqueActividadesCompartmentFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="EncuestaFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="EncuestaFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="EncuestaLabelFigure" text="Encuesta"/>
+      </actualFigure>
+      <accessors accessor="getFigureEncuestaLabelFigure" figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ConsultaFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ConsultaFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ConsultaLabelFigure" text="Consulta"/>
+      </actualFigure>
+      <accessors accessor="getFigureConsultaLabelFigure" figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TareaFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TareaFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="TareaLabelFigure" text="Tarea"/>
+      </actualFigure>
+      <accessors accessor="getFigureTareaLabelFigure" figure="//@figures.0/@descriptors.8/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ENLACEURLFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ENLACEURLFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ENLACEURLLabelFigure" text="ENLACEURL"/>
+      </actualFigure>
+      <accessors accessor="getFigureENLACEURLLabelFigure" figure="//@figures.0/@descriptors.9/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ForoFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ForoFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ForoLabelFigure" text="Foro">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="ForoPreguntasCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureForoLabelFigure" figure="//@figures.0/@descriptors.10/@actualFigure/@children.0"/>
+      <accessors accessor="getForoPreguntasCompartmentFigure" figure="//@figures.0/@descriptors.10/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="RecursoFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="RecursoFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="RecursoLabelFigure" text="Recurso"/>
+      </actualFigure>
+      <accessors accessor="getFigureRecursoLabelFigure" figure="//@figures.0/@descriptors.11/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="GrupoTrabajoFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="GrupoTrabajoFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="GrupoTrabajoLabelFigure" text="GrupoTrabajo"/>
+      </actualFigure>
+      <accessors accessor="getFigureGrupoTrabajoLabelFigure" figure="//@figures.0/@descriptors.12/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="PreguntaFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="PreguntaFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="PreguntaLabelFigure" text="Pregunta">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="PreguntaRespuestasCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigurePreguntaLabelFigure" figure="//@figures.0/@descriptors.13/@actualFigure/@children.0"/>
+      <accessors accessor="getPreguntaRespuestasCompartmentFigure" figure="//@figures.0/@descriptors.13/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="RespuestaFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="RespuestaFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="RespuestaLabelFigure" text="Respuesta">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="RespuestaRespuestaanidadaCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureRespuestaLabelFigure" figure="//@figures.0/@descriptors.14/@actualFigure/@children.0"/>
+      <accessors accessor="getRespuestaRespuestaanidadaCompartmentFigure" figure="//@figures.0/@descriptors.14/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="AsignaturaProfesoresFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AsignaturaProfesoresFigure"/>
+    </descriptors>
+    <descriptors name="AsignaturaProfesoresExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="AsignaturaProfesoresExternalLabel"/>
+    </descriptors>
+    <descriptors name="AsignaturaEscoordinadaFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AsignaturaEscoordinadaFigure"/>
+    </descriptors>
+    <descriptors name="AsignaturaEscoordinadaExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="AsignaturaEscoordinadaExternalLabel"/>
+    </descriptors>
+    <descriptors name="ProfesorAsignaturasFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ProfesorAsignaturasFigure"/>
+    </descriptors>
+    <descriptors name="ProfesorAsignaturasExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ProfesorAsignaturasExternalLabel"/>
+    </descriptors>
+    <descriptors name="ProfesorEscoordinadorFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ProfesorEscoordinadorFigure"/>
+    </descriptors>
+    <descriptors name="ProfesorEscoordinadorExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ProfesorEscoordinadorExternalLabel"/>
+    </descriptors>
+    <descriptors name="AlumnoMatriculadoenTUFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AlumnoMatriculadoenTUFigure"/>
+    </descriptors>
+    <descriptors name="AlumnoMatriculadoenTUExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="AlumnoMatriculadoenTUExternalLabel"/>
+    </descriptors>
+    <descriptors name="AlumnoMatriculadoenASIGFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AlumnoMatriculadoenASIGFigure"/>
+    </descriptors>
+    <descriptors name="AlumnoMatriculadoenASIGExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="AlumnoMatriculadoenASIGExternalLabel"/>
+    </descriptors>
+    <descriptors name="AlumnoGruposdetrabajoFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AlumnoGruposdetrabajoFigure"/>
+    </descriptors>
+    <descriptors name="AlumnoGruposdetrabajoExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="AlumnoGruposdetrabajoExternalLabel"/>
+    </descriptors>
+    <descriptors name="GrupoTrabajoAlumnosGTFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="GrupoTrabajoAlumnosGTFigure"/>
+    </descriptors>
+    <descriptors name="GrupoTrabajoAlumnosGTExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="GrupoTrabajoAlumnosGTExternalLabel"/>
+    </descriptors>
+    <descriptors name="GrupoTrabajoActividadobligatoriaFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="GrupoTrabajoActividadobligatoriaFigure"/>
+    </descriptors>
+    <descriptors name="GrupoTrabajoActividadobligatoriaExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="GrupoTrabajoActividadobligatoriaExternalLabel"/>
+    </descriptors>
+  </figures>
+  <nodes name="Universidad" figure="UniversidadFigure"/>
+  <nodes name="TituloUniversitario" figure="TituloUniversitarioFigure"/>
+  <nodes name="Asignatura" figure="AsignaturaFigure"/>
+  <nodes name="Profesor" figure="ProfesorFigure"/>
+  <nodes name="Alumno" figure="AlumnoFigure"/>
+  <nodes name="Bloque" figure="BloqueFigure"/>
+  <nodes name="Encuesta" figure="EncuestaFigure"/>
+  <nodes name="Consulta" figure="ConsultaFigure"/>
+  <nodes name="Tarea" figure="TareaFigure"/>
+  <nodes name="ENLACEURL" figure="ENLACEURLFigure"/>
+  <nodes name="Foro" figure="ForoFigure"/>
+  <nodes name="Recurso" figure="RecursoFigure"/>
+  <nodes name="GrupoTrabajo" figure="GrupoTrabajoFigure"/>
+  <nodes name="Pregunta" figure="PreguntaFigure"/>
+  <nodes name="Respuesta" figure="RespuestaFigure"/>
+  <connections name="AsignaturaProfesores" figure="AsignaturaProfesoresFigure"/>
+  <connections name="AsignaturaEscoordinada" figure="AsignaturaEscoordinadaFigure"/>
+  <connections name="ProfesorAsignaturas" figure="ProfesorAsignaturasFigure"/>
+  <connections name="ProfesorEscoordinador" figure="ProfesorEscoordinadorFigure"/>
+  <connections name="AlumnoMatriculadoenTU" figure="AlumnoMatriculadoenTUFigure"/>
+  <connections name="AlumnoMatriculadoenASIG" figure="AlumnoMatriculadoenASIGFigure"/>
+  <connections name="AlumnoGruposdetrabajo" figure="AlumnoGruposdetrabajoFigure"/>
+  <connections name="GrupoTrabajoAlumnosGT" figure="GrupoTrabajoAlumnosGTFigure"/>
+  <connections name="GrupoTrabajoActividadobligatoria" figure="GrupoTrabajoActividadobligatoriaFigure"/>
+  <compartments name="UniversidadTitulosuniversitariosCompartment" figure="UniversidadFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.1"/>
+  <compartments name="UniversidadAlumnosCompartment" figure="UniversidadFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.2"/>
+  <compartments name="UniversidadProfesoresCompartment" figure="UniversidadFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.3"/>
+  <compartments name="TituloUniversitarioAsignaturasCompartment" figure="TituloUniversitarioFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+  <compartments name="AsignaturaBloquesCompartment" figure="AsignaturaFigure" collapsible="true" accessor="//@figures.0/@descriptors.2/@accessors.1"/>
+  <compartments name="AsignaturaGrupostrabajoCompartment" figure="AsignaturaFigure" collapsible="true" accessor="//@figures.0/@descriptors.2/@accessors.2"/>
+  <compartments name="BloqueActividadesCompartment" figure="BloqueFigure" collapsible="true" accessor="//@figures.0/@descriptors.5/@accessors.1"/>
+  <compartments name="ForoPreguntasCompartment" figure="ForoFigure" collapsible="true" accessor="//@figures.0/@descriptors.10/@accessors.1"/>
+  <compartments name="PreguntaRespuestasCompartment" figure="PreguntaFigure" collapsible="true" accessor="//@figures.0/@descriptors.13/@accessors.1"/>
+  <compartments name="RespuestaRespuestaanidadaCompartment" figure="RespuestaFigure" collapsible="true" accessor="//@figures.0/@descriptors.14/@accessors.1"/>
+  <labels name="UniversidadLabel" figure="UniversidadFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="TituloUniversitarioLabel" figure="TituloUniversitarioFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="AsignaturaLabel" figure="AsignaturaFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="ProfesorLabel" figure="ProfesorFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="AlumnoLabel" figure="AlumnoFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="BloqueLabel" figure="BloqueFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="EncuestaLabel" figure="EncuestaFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+  <labels name="ConsultaLabel" figure="ConsultaFigure" accessor="//@figures.0/@descriptors.7/@accessors.0"/>
+  <labels name="TareaLabel" figure="TareaFigure" accessor="//@figures.0/@descriptors.8/@accessors.0"/>
+  <labels name="ENLACEURLLabel" figure="ENLACEURLFigure" accessor="//@figures.0/@descriptors.9/@accessors.0"/>
+  <labels name="ForoLabel" figure="ForoFigure" accessor="//@figures.0/@descriptors.10/@accessors.0"/>
+  <labels name="RecursoLabel" figure="RecursoFigure" accessor="//@figures.0/@descriptors.11/@accessors.0"/>
+  <labels name="GrupoTrabajoLabel" figure="GrupoTrabajoFigure" accessor="//@figures.0/@descriptors.12/@accessors.0"/>
+  <labels name="PreguntaLabel" figure="PreguntaFigure" accessor="//@figures.0/@descriptors.13/@accessors.0"/>
+  <labels name="RespuestaLabel" figure="RespuestaFigure" accessor="//@figures.0/@descriptors.14/@accessors.0"/>
+  <labels name="AsignaturaProfesoresExternalLabel" figure="AsignaturaProfesoresExternalLabelFigure" elementIcon="false"/>
+  <labels name="AsignaturaEscoordinadaExternalLabel" figure="AsignaturaEscoordinadaExternalLabelFigure" elementIcon="false"/>
+  <labels name="ProfesorAsignaturasExternalLabel" figure="ProfesorAsignaturasExternalLabelFigure" elementIcon="false"/>
+  <labels name="ProfesorEscoordinadorExternalLabel" figure="ProfesorEscoordinadorExternalLabelFigure" elementIcon="false"/>
+  <labels name="AlumnoMatriculadoenTUExternalLabel" figure="AlumnoMatriculadoenTUExternalLabelFigure" elementIcon="false"/>
+  <labels name="AlumnoMatriculadoenASIGExternalLabel" figure="AlumnoMatriculadoenASIGExternalLabelFigure" elementIcon="false"/>
+  <labels name="AlumnoGruposdetrabajoExternalLabel" figure="AlumnoGruposdetrabajoExternalLabelFigure" elementIcon="false"/>
+  <labels name="GrupoTrabajoAlumnosGTExternalLabel" figure="GrupoTrabajoAlumnosGTExternalLabelFigure" elementIcon="false"/>
+  <labels name="GrupoTrabajoActividadobligatoriaExternalLabel" figure="GrupoTrabajoActividadobligatoriaExternalLabelFigure" elementIcon="false"/>
+</gmfgraph:Canvas>

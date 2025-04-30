@@ -1,0 +1,151 @@
+@namespace(uri="http://www.example.org/dmss_pa_01", prefix="dmss_pa_01")
+@gmf
+@GenModel(operationReflection="true",tableProviders="true",complianceLevel="6.0")
+package dmss_pa_01;
+
+@gmf.node(label="Nombre")
+class Universidad {
+	@gmf.compartment
+	val TituloUniversitario[+] titulosuniversitarios;
+	attr String Nombre;
+	@gmf.compartment
+	val Alumno[+] alumnos;
+	@gmf.compartment
+	val Profesor[+] profesores;
+}
+
+@gmf.node(label="Nombre")
+class TituloUniversitario {
+	@gmf.compartment
+	val Asignatura[+] asignaturas;
+	attr String Nombre;
+}
+
+@gmf.node(label="Nombre")
+class Asignatura {
+	attr String Nombre;
+	attr String Codigo;
+	@gmf.compartment
+	val Bloque[+] bloques;
+	@gmf.link(source="Asignatura", target="Profesor")
+	ref Profesor[+]#asignaturas profesores;
+	attr String Ficha12a;
+	@gmf.compartment
+	val GrupoTrabajo[*] grupostrabajo;
+	@gmf.link(source="Asignatura", target="Profesor")
+	ref Profesor#escoordinador escoordinada;
+}
+
+@gmf.node(label="Nombre")
+class Profesor {
+	attr String Nombre;
+	@gmf.link(source="Profesor", target="Asignatura")
+	ref Asignatura[*]#profesores asignaturas;
+	@gmf.link(source="Profesor", target="Asignatura")
+	ref Asignatura#escoordinada escoordinador;
+}
+
+@gmf.node(label="Nombre")
+class Alumno {
+	attr String Nombre;
+	@gmf.link(source="Alumno", target="TituloUniversitario")
+	ref TituloUniversitario[+] matriculadoenTU;
+	@gmf.link(source="Alumno", target="Asignatura")
+	ref Asignatura[*] matriculadoenASIG;
+	@gmf.link(source="Alumno", target="GrupoTrabajo")
+	ref GrupoTrabajo[*]#alumnosGT gruposdetrabajo;
+}
+
+@gmf.node(label="Nombre")
+class Bloque {
+	@gmf.compartment
+	val Actividad[+] actividades;
+	attr String Nombre;
+}
+
+abstract class Actividad {
+	attr int ID;
+	attr String Descripcion;
+	attr boolean Visible;
+}
+
+@gmf.node(label="Descripcion")
+class Encuesta extends Actividad {
+}
+
+@gmf.node(label="Descripcion")
+class Consulta extends Actividad {
+}
+
+@gmf.node(label="Descripcion")
+class Tarea extends Actividad {
+	attr int NumMax;
+	attr String FechaLimite;
+	attr NOTA Calificacion;
+}
+
+@gmf.node(label="Descripcion")
+class ENLACEURL extends Actividad {
+	attr String url;
+}
+
+@gmf.node(label="Descripcion")
+class Foro extends Actividad {
+	@gmf.compartment
+	val Pregunta[*] preguntas;
+}
+
+@gmf.node(label="Extension")
+class Recurso extends Actividad {
+	attr TIPO Extension;
+}
+
+enum NOTA {
+	ESCALA5 = 1;
+	ESCALA2 = 2;
+}
+
+enum TIPO {
+	PDF = 0;
+	WORD = 1;
+	ODT = 2;
+	ODP = 3;
+	AVI = 4;
+	MP4 = 5;
+	PPT = 6;
+	UNDEFINED = 7;
+}
+
+@gmf.node(label="Descripcion")
+class GrupoTrabajo {
+	attr int ID;
+	attr String Descripcion;
+	attr int Numgrupos;
+	attr int NumMinEstu;
+	attr int NumMaxEstu;
+	@gmf.link(source="GrupoTrabajo", target="Alumno")
+	ref Alumno[+]#gruposdetrabajo alumnosGT;
+	@gmf.link(source="GrupoTrabajo", target="Actividad")
+	ref Actividad[*] actividadobligatoria;
+}
+
+@gmf.node(label="Texto")
+class Pregunta {
+	@gmf.compartment
+	val Respuesta[*] respuestas;
+	attr String Texto;
+}
+
+@gmf.node(label="Texto")
+class Respuesta {
+	@gmf.compartment
+	val Respuesta[*] respuestaanidada;
+	attr String Texto;
+}
+
+@gmf.diagram
+class Root {
+	@gmf.compartment
+	val Universidad[*] universidad;
+}
+

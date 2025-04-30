@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trace:TraceModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:trace="http://www.eclipse.org/gmf/2006/Trace">
+  <nodeTraces
+      visualID="2001"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Universidad') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Root') and _containmentMF_.name = 'universidad')">
+    <nodeLabelTraces
+        visualID="5001"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7001"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7002"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7003"
+        queryText="true"/>
+  </nodeTraces>
+  <childNodeTraces
+      visualID="3001"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'TituloUniversitario') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Universidad') and _containmentMF_.name = 'titulosuniversitarios')">
+    <nodeLabelTraces
+        visualID="5014"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7004"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3002"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Asignatura') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'TituloUniversitario') and _containmentMF_.name = 'asignaturas')">
+    <nodeLabelTraces
+        visualID="5013"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7005"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7006"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3003"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Bloque') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Asignatura') and _containmentMF_.name = 'bloques')">
+    <nodeLabelTraces
+        visualID="5011"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7007"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3004"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Encuesta') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Bloque') and _containmentMF_.name = 'actividades')">
+    <nodeLabelTraces
+        visualID="5002"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3005"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Consulta') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Bloque') and _containmentMF_.name = 'actividades')">
+    <nodeLabelTraces
+        visualID="5003"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3006"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Tarea') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Bloque') and _containmentMF_.name = 'actividades')">
+    <nodeLabelTraces
+        visualID="5004"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3007"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'ENLACEURL') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Bloque') and _containmentMF_.name = 'actividades')">
+    <nodeLabelTraces
+        visualID="5005"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3008"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Foro') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Bloque') and _containmentMF_.name = 'actividades')">
+    <nodeLabelTraces
+        visualID="5009"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7008"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3009"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Pregunta') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Foro') and _containmentMF_.name = 'preguntas')">
+    <nodeLabelTraces
+        visualID="5008"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7009"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3010"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Respuesta') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Pregunta') and _containmentMF_.name = 'respuestas')">
+    <nodeLabelTraces
+        visualID="5007"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7010"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3011"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Respuesta') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Respuesta') and _containmentMF_.name = 'respuestaanidada')">
+    <nodeLabelTraces
+        visualID="5006"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7011"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3012"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Recurso') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Bloque') and _containmentMF_.name = 'actividades')">
+    <nodeLabelTraces
+        visualID="5010"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3013"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'GrupoTrabajo') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Asignatura') and _containmentMF_.name = 'grupostrabajo')">
+    <nodeLabelTraces
+        visualID="5012"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3014"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Alumno') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Universidad') and _containmentMF_.name = 'alumnos')">
+    <nodeLabelTraces
+        visualID="5015"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3015"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Profesor') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Universidad') and _containmentMF_.name = 'profesores')">
+    <nodeLabelTraces
+        visualID="5016"
+        queryText="true"/>
+  </childNodeTraces>
+  <linkTraces
+      visualID="4006"
+      queryText="modelFacet.oclIsKindOf(gmfgen::FeatureLinkModelFacet) and (let _feature_:ecore::EStructuralFeature = modelFacet.oclAsType(gmfgen::FeatureLinkModelFacet).metaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _feature_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Asignatura') and _feature_.name = 'profesores')">
+    <linkLabelTraces
+        visualID="6006"
+        queryText="true"/>
+  </linkTraces>
+  <linkTraces
+      visualID="4008"
+      queryText="modelFacet.oclIsKindOf(gmfgen::FeatureLinkModelFacet) and (let _feature_:ecore::EStructuralFeature = modelFacet.oclAsType(gmfgen::FeatureLinkModelFacet).metaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _feature_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Asignatura') and _feature_.name = 'escoordinada')">
+    <linkLabelTraces
+        visualID="6008"
+        queryText="true"/>
+  </linkTraces>
+  <linkTraces
+      visualID="4009"
+      queryText="modelFacet.oclIsKindOf(gmfgen::FeatureLinkModelFacet) and (let _feature_:ecore::EStructuralFeature = modelFacet.oclAsType(gmfgen::FeatureLinkModelFacet).metaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _feature_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Profesor') and _feature_.name = 'asignaturas')">
+    <linkLabelTraces
+        visualID="6009"
+        queryText="true"/>
+  </linkTraces>
+  <linkTraces
+      visualID="4010"
+      queryText="modelFacet.oclIsKindOf(gmfgen::FeatureLinkModelFacet) and (let _feature_:ecore::EStructuralFeature = modelFacet.oclAsType(gmfgen::FeatureLinkModelFacet).metaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _feature_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Profesor') and _feature_.name = 'escoordinador')">
+    <linkLabelTraces
+        visualID="6010"
+        queryText="true"/>
+  </linkTraces>
+  <linkTraces
+      visualID="4011"
+      queryText="modelFacet.oclIsKindOf(gmfgen::FeatureLinkModelFacet) and (let _feature_:ecore::EStructuralFeature = modelFacet.oclAsType(gmfgen::FeatureLinkModelFacet).metaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _feature_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Alumno') and _feature_.name = 'matriculadoenTU')">
+    <linkLabelTraces
+        visualID="6011"
+        queryText="true"/>
+  </linkTraces>
+  <linkTraces
+      visualID="4012"
+      queryText="modelFacet.oclIsKindOf(gmfgen::FeatureLinkModelFacet) and (let _feature_:ecore::EStructuralFeature = modelFacet.oclAsType(gmfgen::FeatureLinkModelFacet).metaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _feature_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Alumno') and _feature_.name = 'matriculadoenASIG')">
+    <linkLabelTraces
+        visualID="6012"
+        queryText="true"/>
+  </linkTraces>
+  <linkTraces
+      visualID="4013"
+      queryText="modelFacet.oclIsKindOf(gmfgen::FeatureLinkModelFacet) and (let _feature_:ecore::EStructuralFeature = modelFacet.oclAsType(gmfgen::FeatureLinkModelFacet).metaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _feature_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'Alumno') and _feature_.name = 'gruposdetrabajo')">
+    <linkLabelTraces
+        visualID="6013"
+        queryText="true"/>
+  </linkTraces>
+  <linkTraces
+      visualID="4016"
+      queryText="modelFacet.oclIsKindOf(gmfgen::FeatureLinkModelFacet) and (let _feature_:ecore::EStructuralFeature = modelFacet.oclAsType(gmfgen::FeatureLinkModelFacet).metaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _feature_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'GrupoTrabajo') and _feature_.name = 'alumnosGT')">
+    <linkLabelTraces
+        visualID="6016"
+        queryText="true"/>
+  </linkTraces>
+  <linkTraces
+      visualID="4017"
+      queryText="modelFacet.oclIsKindOf(gmfgen::FeatureLinkModelFacet) and (let _feature_:ecore::EStructuralFeature = modelFacet.oclAsType(gmfgen::FeatureLinkModelFacet).metaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _feature_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/dmss_pa_01' and _eClass_.name = 'GrupoTrabajo') and _feature_.name = 'actividadobligatoria')">
+    <linkLabelTraces
+        visualID="6017"
+        queryText="true"/>
+  </linkTraces>
+</trace:TraceModel>
