@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dmss_pa_01 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="dmss_pa_01.presentation.Dmss_pa_01ModelWizardID"
+            name="%_UI_Dmss_pa_01ModelWizard_label"
+            class="dmss_pa_01.presentation.Dmss_pa_01ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Dmss_pa_01ModelFile.gif">
+         <description>%_UI_Dmss_pa_01ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dmss_pa_01 -->
+      <editor
+            id="dmss_pa_01.presentation.Dmss_pa_01EditorID"
+            name="%_UI_Dmss_pa_01Editor_label"
+            icon="icons/full/obj16/Dmss_pa_01ModelFile.gif"
+            extensions="dmss_pa_01"
+            class="dmss_pa_01.presentation.Dmss_pa_01Editor"
+            contributorClass="dmss_pa_01.presentation.Dmss_pa_01ActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

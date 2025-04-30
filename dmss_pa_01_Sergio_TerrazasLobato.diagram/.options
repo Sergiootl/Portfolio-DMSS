@@ -1,0 +1,7 @@
+# Tracing options for the dmss_pa_01_Sergio_TerrazasLobato.diagram plug-in
+
+# Common issues
+dmss_pa_01_Sergio_TerrazasLobato.diagram/debug=false
+
+# Visual IDs
+dmss_pa_01_Sergio_TerrazasLobato.diagram/debug/visualID=false
