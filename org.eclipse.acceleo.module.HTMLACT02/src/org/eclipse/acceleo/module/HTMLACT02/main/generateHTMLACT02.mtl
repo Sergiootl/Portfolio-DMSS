@@ -3,6 +3,283 @@
 
 [template public generateHTMLACT02(anUniversidad : Universidad)]
 [comment @main /]
+[file ('styles.css', false, 'UTF-8')]
+/* Reset de márgenes y padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuentes */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Encabezados */
+h1, h2, h3, h4 {
+  color: #003B5C; /* Azul institucional */
+  margin-bottom: 10px;
+}
+
+/* Encabezado principal */
+.header {
+  background-color: #FFB81C; /* Amarillo institucional */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Contenido principal */
+.main-content {
+  flex: 3;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Barra lateral */
+.sidebar {
+  flex: 1;
+  background-color: #e9ecef;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Enlaces */
+a {
+  color: #006747; /* Verde institucional */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Listas */
+ul {
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Pie de página */
+.footer {
+  background-color: #003B5C; /* Azul institucional */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Estilos para tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #006747;
+  color: white;
+}
+
+/* Estilos para formularios */
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #003B5C;
+}
+
+/* Botones */
+button {
+  background-color: #FFB81C;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e0a800;
+}
+
+/* Estilos para titulaciones */
+.titulos-ofertados {
+  margin-top: 30px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.lista-titulaciones {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.titulo-item {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.titulo-item a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.titulo-item a:hover {
+  text-decoration: underline;
+}
+
+.volver-indice {
+  text-align: center;
+  margin: 30px 0;
+  font-weight: bold;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.volver-indice a {
+  color: #003B5C;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.volver-indice a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo de secciones como bloques o grupos */
+.section {
+  margin-top: 2em;
+  padding: 1em;
+  border-top: 2px solid #ccc;
+}
+
+.section-title {
+  font-size: 1.6em;
+  color: #222;
+  margin-bottom: 0.5em;
+}
+
+.subsection {
+  margin-bottom: 1.5em;
+  padding-left: 1em;
+}
+
+.subsection-title {
+  font-size: 1.3em;
+  color: #444;
+  margin-bottom: 0.4em;
+}
+
+/* Listas internas con viñetas visibles y sangrado */
+.item-list {
+  list-style-type: disc;
+  padding-left: 1.5em;
+}
+
+.item-list li {
+  margin: 0.3em 0;
+}
+
+/* Estilo para nombres (personas, recursos destacados) */
+.nombre-persona {
+  color: #006747;
+  font-weight: bold;
+}
+
+/* Lista sangrada para mostrar integrantes de grupo */
+.lista-integrantes {
+  margin-left: 2em;
+  padding-left: 1em;
+  list-style-type: circle;
+}
+
+/* Actividades visibles */
+.visible-actividad {
+  color: #333;
+}
+
+/* Actividades ocultas (no visibles) */
+.oculta-actividad {
+  color: #bbb;           /* Gris claro */
+  font-style: italic;    /* Opcional: para diferenciarlas más */
+}
+/* Estilo para la sección de Grupos de trabajo */
+.section-title {
+  font-size: 1.6em;
+  color: #222;
+  margin-bottom: 1em;
+}
+
+/* Estilo para la lista de Grupos */
+.item-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.item-list .grupo-item {
+  margin-bottom: 10px;
+}
+
+.grupo-id {
+  font-weight: bold;
+  color: #006747; /* Verde institucional para el ID del grupo */
+}
+
+.asignatura-nombre {
+  color: #003B5C; /* Azul institucional para el nombre de la asignatura */
+  font-weight: bold;
+  text-decoration: none; /* Sin subrayado por defecto */
+}
+
+.asignatura-nombre:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.giiis-text {
+  color: #9b4d97; /* Morado para (GIIIS) */
+  font-style: italic;
+}
+
+.giiis-text:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+[/file]
+
 
 [file ('index.html', false, 'UTF-8')]
 <!DOCTYPE html>
@@ -20,11 +297,12 @@
   <div class="container">
     <div class="main-content">
       <h2>Bienvenidos a la página principal de [anUniversidad.Nombre/]</h2>
-      <p>Titulaciones ofertadas:</p>
-      <ol>
+      <p class="titulos-ofertados">Titulaciones ofertadas:</p>
+      <ol class="lista-titulaciones">
         [for (t : TituloUniversitario | anUniversidad.titulosuniversitarios->sortedBy(t | t.Nombre))]
-          <li>
-            <a href="generated/T_[t.Nombre.replace(' ', '_')/].html">[t.Nombre/]</a>
+          <li class="titulo-item">
+            <!-- Enlace a la página del título -->
+            <a href="[t.Nombre.replace(' ', '_').toLowerCase()/]/index.html">[t.Nombre/]</a>
           </li>
         [/for]
       </ol>
@@ -37,7 +315,6 @@
 </body>
 </html>
 [/file]
-
 [for (t : TituloUniversitario | anUniversidad.titulosuniversitarios)]
   [generateTituloUniversitarioPage(t)/]
 [/for]
@@ -53,13 +330,13 @@
 [/template]
 
 [template public generateTituloUniversitarioPage(t : TituloUniversitario)]
-  [file (''.concat(t.Nombre.replace(' ', '_').toLowerCase()).concat('.html'), false, 'UTF-8')]
+  [file (t.Nombre.replace(' ', '_').toLowerCase().concat('/index.html'), false, 'UTF-8')]
     <!DOCTYPE html>
     <html lang="es">
     <head>
       <meta charset="UTF-8">
       <title>[t.Nombre/] - Detalles del Título</title>
-      <link rel="stylesheet" href="../styles.css">
+      <link rel="stylesheet" href="../styles.css"> <!-- Asegúrate de que la ruta al CSS es correcta -->
     </head>
     <body>
       <div class="header">
@@ -75,7 +352,7 @@
           <h3>Asignaturas del Título</h3>
           <ul>
             [for (asignatura : Asignatura | t.asignaturas)]
-              <li><a href="A_[asignatura.Nombre.replace(' ', '_')/].html">[asignatura.Nombre/]</a></li>
+              <li><a href="asignaturas/[asignatura.Nombre.replace(' ', '_').toLowerCase()/].html">[asignatura.Nombre/]</a></li>
             [/for]
           </ul>
 
@@ -83,7 +360,7 @@
           <h3>Profesores que imparten el Título</h3>
           <ul>
             [for (profesor : Profesor | t.asignaturas.esimpartidaprofesores)]
-              <li><a href="P_[profesor.Nombre.replace(' ', '_')/].html">[profesor.Nombre/]</a></li>
+              <li><a href="profesores/[profesor.Nombre.replace(' ', '_').toLowerCase()/].html">[profesor.Nombre/]</a></li>
             [/for]
           </ul>
 
@@ -91,15 +368,14 @@
           <h3>Estudiantes matriculados en el Título</h3>
           <ul>
             [for (alumno : Alumno | t.asignaturas.tienealumno)]
-              <li><a href="E_[alumno.Nombre.replace(' ', '_')/].html">[alumno.Nombre/]</a></li>
+              <li><a href="alumnos/[alumno.Nombre.replace(' ', '_').toLowerCase()/].html">[alumno.Nombre/]</a></li>
             [/for]
           </ul>
-
         </div>
+      </div>
 
-        <div class="sidebar">
-          <a href="../index.html">Volver al índice</a>
-        </div>
+      <div class="volver-indice">
+        <a href="../index.html">Volver al índice de títulos</a>
       </div>
 
       <div class="footer">
@@ -108,17 +384,29 @@
     </body>
     </html>
   [/file]
-
 [/template]
 
+
+
+
+
+
+
+
 [template public generateAsignaturaPage(asignatura : Asignatura)]
-  [file (''.concat(asignatura.Nombre.replace(' ', '_').toLowerCase()).concat('.html'), false, 'UTF-8')]
+  [file (
+    '/'.concat(
+      (TituloUniversitario.allInstances()->any(t | t.asignaturas->includes(asignatura)).Nombre.replace(' ', '_').toLowerCase())
+    ).concat('/asignaturas/').concat(asignatura.Nombre.replace(' ', '_').toLowerCase()).concat('.html'),
+    false,
+    'UTF-8')]
+
     <!DOCTYPE html>
     <html lang="es">
     <head>
       <meta charset="UTF-8">
       <title>[asignatura.Nombre/] - Detalles de la Asignatura</title>
-      <link rel="stylesheet" href="../styles.css">
+      <link rel="stylesheet" href="../../styles.css">
     </head>
     <body>
       <div class="header">
@@ -129,15 +417,13 @@
         <div class="main-content">
           <!-- Detalles de la Asignatura -->
           <h2>Detalles de la Asignatura</h2>
-
-          <!-- Ficha12A -->
           <h3>Ficha12A: [asignatura.Ficha12a/]</h3>
 
           <!-- Profesores -->
           <h3>Profesores que imparten la Asignatura</h3>
           <ul>
             [for (profesor : Profesor | asignatura.esimpartidaprofesores)]
-              <li><a href="P_[profesor.Nombre.replace(' ', '_')/].html">[profesor.Nombre/]</a></li>
+              <li><a href="../../[TituloUniversitario.allInstances()->any(t | t.asignaturas->includes(asignatura)).Nombre.replace(' ', '_').toLowerCase()/]/profesores/[profesor.Nombre.replace(' ', '_').toLowerCase()/].html">[profesor.Nombre/]</a></li>
             [/for]
           </ul>
 
@@ -145,41 +431,69 @@
           <h3>Alumnos matriculados en la Asignatura</h3>
           <ul>
             [for (alumno : Alumno | asignatura.tienealumno)]
-              <li><a href="E_[alumno.Nombre.replace(' ', '_')/].html">[alumno.Nombre/]</a></li>
+              <li><a href="../../[TituloUniversitario.allInstances()->any(t | t.asignaturas->includes(asignatura)).Nombre.replace(' ', '_').toLowerCase()/]/alumnos/[alumno.Nombre.replace(' ', '_').toLowerCase()/].html">[alumno.Nombre/]</a></li>
             [/for]
           </ul>
 
-          <!-- Bloques -->
-          <h3>Bloques de la Asignatura</h3>
-          <ul>
-            [for (bloque : Bloque | asignatura.bloques)]
-              <li>
-                [bloque.Nombre/]
-                <!-- Actividades del Bloque -->
-                <ul>
-                  [for (actividad : Actividad | bloque.actividades)]
-                    <li>[actividad.ID/]</li>
-                  [/for]
-                </ul>
-              </li>
-            [/for]
-          </ul>
+<!-- Bloques -->
+<div class="section">
+  <h3 class="section-title">Bloques de la Asignatura</h3>
+  [for (bloque : Bloque | asignatura.bloques)]
+    <div class="subsection">
+      <h4 class="subsection-title">[bloque.Nombre/]</h4>
+      <ul class="item-list">
+        [for (actividad : Actividad | bloque.actividades)]
+  <li>
+  <span class="nombre-persona [if (actividad.Visible) ]visible-actividad[else]oculta-actividad[/if]">
+    [actividad.Descripcion/]
+   
+  [' [' + actividad.eClass().name + ']' /]
+</span>
+</li>
 
-          <!-- Grupos de trabajo -->
-          <h3>Grupos de trabajo de la Asignatura</h3>
-          [for (configuracion : ConfiguracionGrupos | asignatura.grupostrabajo)]
-            <h4>Configuración de Grupos: [configuracion.ID/]</h4>
-            <ul>
-              [for (grupo : GrupoTrabajo | configuracion.tiene)]
-                <li>[grupo.ID/]</li>
+[/for]
+
+      </ul>
+    </div>
+  [/for]
+</div>
+
+
+
+<!-- Grupos de trabajo -->
+<div class="section">
+  <h3 class="section-title">Grupos de trabajo</h3>
+
+  [for (grupo : ConfiguracionGrupos | asignatura.grupostrabajo)]
+    <div class="subsection">
+      <h4 class="subsection-title">
+        [grupo.ID/] ([grupo.NumMinEstu/]-[grupo.NumMaxEstu/] estudiantes)
+      </h4>
+      <ul class="item-list">
+        [for (subgrupo : GrupoTrabajo | grupo.tiene)]
+          <li>
+            <strong>[subgrupo.ID/] - [subgrupo.Descripcion/] 
+            ([subgrupo.alumnosGT->size()/] estudiantes)</strong>
+            <ul class="lista-integrantes">
+              [for (alumno : Alumno | subgrupo.alumnosGT)]
+                <li><span class="nombre-persona">[alumno.Nombre/]</span></li>
               [/for]
             </ul>
-          [/for]
-        </div>
+          </li>
+        [/for]
+      </ul>
+    </div>
+  [/for]
+</div>
 
-        <div class="sidebar">
-          <a href="../index.html">Volver al índice</a>
+
+
+
         </div>
+      </div>
+
+      <div class="volver-indice">
+        <a href="../../index.html">Volver al índice de títulos</a>
       </div>
 
       <div class="footer">
@@ -189,98 +503,150 @@
     </html>
   [/file]
 [/template]
+
+
+
 
 
 [template public generateProfesorPage(profesor : Profesor)]
-  [file (''.concat(profesor.Nombre.replace(' ', '_').toLowerCase()).concat('.html'), false, 'UTF-8')]
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-      <meta charset="UTF-8">
-      <title>[profesor.Nombre/] - Detalles del Profesor</title>
-      <link rel="stylesheet" href="../styles.css">
-    </head>
-    <body>
-      <div class="header">
-        <h1>[profesor.Nombre/]</h1>
-      </div>
+  [file (
+    '/'.concat(
+      (TituloUniversitario.allInstances()->any(
+        t | t.asignaturas.esimpartidaprofesores->includes(profesor) or 
+            t.asignaturas.escoordinada->includes(profesor)
+      ).Nombre.replace(' ', '_').toLowerCase())
+    ).concat('/profesores/')
+     .concat(profesor.Nombre.replace(' ', '_').toLowerCase())
+     .concat('.html'),
+    false,
+    'UTF-8'
+  )]
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+          <meta charset="UTF-8">
+          <title>[profesor.Nombre/] - Detalles del Profesor</title>
+          <link rel="stylesheet" href="../../styles.css">
+        </head>
+        <body>
+          <div class="header">
+            <h1>[profesor.Nombre/]</h1>
+          </div>
 
-      <div class="container">
-        <div class="main-content">
-          <!-- Detalles del Profesor -->
-          <h2>Detalles del Profesor</h2>
+          <div class="container">
+            <div class="main-content">
+              <!-- Detalles del Profesor -->
+              <h2>Detalles del Profesor</h2>
 
-          <!-- Asignaturas que imparte -->
-          <h3>Asignaturas que imparte</h3>
-          <ul>
-            [for (asignatura : Asignatura | profesor.imparteasignaturas)]
-              <li><a href="A_[asignatura.Nombre.replace(' ', '_')/].html">[asignatura.Nombre/]</a></li>
-            [/for]
-          </ul>
+              <!-- Asignaturas que imparte -->
+              <h3>Asignaturas que imparte</h3>
+              <ul>
+                [for (asignatura : Asignatura | profesor.imparteasignaturas)]
+                  <li>
+                    <a href="../asignaturas/[asignatura.Nombre.replace(' ', '_').toLowerCase()/].html">
+                      [asignatura.Nombre/]
+                    </a>
+                  </li>
+                [/for]
+              </ul>
 
-          <!-- Asignaturas que coordina -->
-          <h3>Asignaturas que coordina</h3>
-          <ul>
-            [for (asignatura : Asignatura | profesor.escoordinador)]
-              <li><a href="A_[asignatura.Nombre.replace(' ', '_')/].html">[asignatura.Nombre/]</a></li>
-            [/for]
-          </ul>
+              <!-- Asignaturas que coordina -->
+              <h3>Asignaturas que coordina</h3>
+              <ul>
+                [for (asignatura : Asignatura | profesor.escoordinador)]
+                  <li>
+                    <a href="../asignaturas/[asignatura.Nombre.replace(' ', '_').toLowerCase()/].html">
+                      [asignatura.Nombre/]
+                    </a>
+                  </li>
+                [/for]
+              </ul>
+            </div>
+          </div>
 
-        </div>
+          <div class="volver-indice">
+            <a href="../../index.html">Volver al índice de títulos</a>
+          </div>
 
-        <div class="sidebar">
-          <a href="../index.html">Volver al índice</a>
-        </div>
-      </div>
+          <div class="footer">
+            <p>Información generada automáticamente.</p>
+          </div>
+        </body>
+        </html>
+      [/file]
 
-      <div class="footer">
-        <p>Información generada automáticamente.</p>
-      </div>
-    </body>
-    </html>
-  [/file]
 [/template]
 
 [template public generateAlumnoPage(alumno : Alumno)]
-  [file (''.concat(alumno.Nombre.replace(' ', '_').toLowerCase()).concat('.html'), false, 'UTF-8')]
+  [file (
+    '/'.concat(
+      (TituloUniversitario.allInstances()->any(t | t.asignaturas.tienealumno->includes(alumno)).Nombre.replace(' ', '_').toLowerCase())
+    ).concat('/alumnos/')
+    .concat(alumno.Nombre.replace(' ', '_').toLowerCase())
+    .concat('.html'),
+    false,
+    'UTF-8'
+  )]
     <!DOCTYPE html>
     <html lang="es">
     <head>
       <meta charset="UTF-8">
       <title>[alumno.Nombre/] - Detalles del Alumno</title>
-      <link rel="stylesheet" href="../styles.css">
+      <link rel="stylesheet" href="../../styles.css">
     </head>
     <body>
       <div class="header">
         <h1>[alumno.Nombre/]</h1>
       </div>
 
-      <div class="container">
-        <div class="main-content">
-          <!-- Detalles del Alumno -->
-          <h2>Detalles del Alumno</h2>
+  <div class="container">
+  <div class="main-content">
+    <!-- Detalles del Alumno -->
+    <h2>Detalles del Alumno</h2>
 
-          <!-- Asignaturas en las que está matriculado -->
-          <h3>Asignaturas matriculadas</h3>
-          <ul>
-            [for (asignatura : Asignatura | alumno.cursaasignatura)]
-              <li><a href="A_[asignatura.Nombre.replace(' ', '_')/].html">[asignatura.Nombre/]</a></li>
-            [/for]
-          </ul>
+    <!-- Asignaturas en las que está matriculado -->
+    <h3>Asignaturas matriculadas</h3>
+    <ul>
+      [for (asignatura : Asignatura | alumno.cursaasignatura)]
+        <li>
+          <a href="../asignaturas/[asignatura.Nombre.replace(' ', '_').toLowerCase()/].html">
+            [asignatura.Nombre/]
+          </a>
+<a href="../../index.html">(GIIIS)</a>
+        </li>
+      [/for]
+    </ul>
 
-          <!-- Grupos de trabajo -->
-          <h3>Grupos de trabajo</h3>
-          <ul>
-            [for (grupo : GrupoTrabajo | alumno.gruposdetrabajo)]
-              <li>[grupo.ID/]</li>
-            [/for]
-          </ul>
+    <!-- Grupos de trabajo -->
+    <h3>Grupos de trabajo</h3>
+    <ul>
+      [for (grupo : GrupoTrabajo | alumno.gruposdetrabajo)]
+        <li>
+          <strong>Grupo [grupo.ID/] : </strong>
+          [for (asignatura : Asignatura | alumno.cursaasignatura)]
+            [if (asignatura.grupostrabajo.tiene->includes(grupo))] 
+              <a href="../../[TituloUniversitario.allInstances()->any(t | t.asignaturas->includes(asignatura)).Nombre.replace(' ', '_').toLowerCase()/]/asignaturas/[asignatura.Nombre.replace(' ', '_').toLowerCase()/].html">
+                [asignatura.Nombre/]
+              </a> 
+              <a href="../../index.html">(GIIIS)</a>
+            [/if]
+          [/for]
+        </li>
+      [/for]
+    </ul>
+  </div>
+</div>
+
+
+
+
+
 
         </div>
+      </div>
 
-        <div class="sidebar">
-          <a href="../index.html">Volver al índice</a>
-        </div>
+      <div class="volver-indice">
+        <a href="../../index.html">Volver al índice de títulos</a>
       </div>
 
       <div class="footer">
@@ -290,7 +656,4 @@
     </html>
   [/file]
 [/template]
-
-
-
 

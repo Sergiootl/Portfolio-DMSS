@@ -4,7 +4,8 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:dmss_pa_01="http://www.example.org/dmss_pa_01"
-    xsi:schemaLocation="http://www.example.org/dmss_pa_01 ../metamodel/dmss_pa_01.ecore">
+    xsi:schemaLocation="http://www.example.org/dmss_pa_01 ../metamodel/dmss_pa_01.ecore"
+    Nombre="Universidad de Extremadura">
   <titulosuniversitarios
       Nombre="Ingeniería Informática en Ingeniería del Software">
     <asignaturas
@@ -15,7 +16,7 @@
         escoordinada="//@profesores.0"
         tienealumno="//@alumnos.0 //@alumnos.1">
       <bloques
-          Nombre="TeroriaIP">
+          Nombre="TeoriaIP">
         <actividades
             xsi:type="dmss_pa_01:Recurso"
             ID="1"
@@ -160,7 +161,7 @@
         <tiene
             ID="IP_GT02"
             alumnosGT="//@alumnos.1"
-            Descripcion="IP - Grupo de teoría 1"/>
+            Descripcion="IP - Grupo de teoría 2"/>
       </grupostrabajo>
       <grupostrabajo
           ID="Grupos de prácticas de IP"
@@ -184,7 +185,7 @@
         escoordinada="//@profesores.4"
         tienealumno="//@alumnos.2 //@alumnos.3 //@alumnos.0 //@alumnos.4 //@alumnos.5">
       <bloques
-          Nombre="TeroriaDMSS">
+          Nombre="TeoriaDMSS">
         <actividades
             xsi:type="dmss_pa_01:Recurso"
             ID="1"
@@ -349,7 +350,7 @@
         escoordinada="//@profesores.3"
         tienealumno="//@alumnos.5 //@alumnos.1">
       <bloques
-          Nombre="TeroriaPI">
+          Nombre="TeoriaPI">
         <actividades
             xsi:type="dmss_pa_01:Recurso"
             ID="1"
@@ -514,7 +515,7 @@
         escoordinada="//@profesores.2"
         tienealumno="//@alumnos.4 //@alumnos.5 //@alumnos.1">
       <bloques
-          Nombre="TeroriaTL">
+          Nombre="TeoriaTL">
         <actividades
             xsi:type="dmss_pa_01:Recurso"
             ID="1"
