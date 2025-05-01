@@ -1,10 +1,296 @@
 [comment encoding = UTF-8 /]
 [module generateHTMLACT02('http://www.example.org/dmss_pa_01')]
 
-
 [template public generateHTMLACT02(anUniversidad : Universidad)]
-[comment @main/]
-[file (anUniversidad.Nombre, false, 'UTF-8')]
+[comment @main /]
 
+[file ('index.html', false, 'UTF-8')]
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>[anUniversidad.Nombre/] - Página principal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <h1>[anUniversidad.Nombre/]</h1>
+  </div>
+
+  <div class="container">
+    <div class="main-content">
+      <h2>Bienvenidos a la página principal de [anUniversidad.Nombre/]</h2>
+      <p>Titulaciones ofertadas:</p>
+      <ol>
+        [for (t : TituloUniversitario | anUniversidad.titulosuniversitarios->sortedBy(t | t.Nombre))]
+          <li>
+            <a href="generated/T_[t.Nombre.replace(' ', '_')/].html">[t.Nombre/]</a>
+          </li>
+        [/for]
+      </ol>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>[anUniversidad.Nombre/]</p>
+  </div>
+</body>
+</html>
 [/file]
+
+[for (t : TituloUniversitario | anUniversidad.titulosuniversitarios)]
+  [generateTituloUniversitarioPage(t)/]
+[/for]
+[for (asignatura : Asignatura | anUniversidad.titulosuniversitarios.asignaturas)]
+  [generateAsignaturaPage(asignatura)/]
+[/for]
+[for (profesor : Profesor | anUniversidad.titulosuniversitarios.asignaturas.esimpartidaprofesores)]
+  [generateProfesorPage(profesor)/]
+[/for]
+[for (alumno : Alumno | anUniversidad.titulosuniversitarios.asignaturas.tienealumno)]
+  [generateAlumnoPage(alumno)/]
+[/for]
 [/template]
+
+[template public generateTituloUniversitarioPage(t : TituloUniversitario)]
+  [file (''.concat(t.Nombre.replace(' ', '_').toLowerCase()).concat('.html'), false, 'UTF-8')]
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <title>[t.Nombre/] - Detalles del Título</title>
+      <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+      <div class="header">
+        <h1>[t.Nombre/]</h1>
+      </div>
+
+      <div class="container">
+        <div class="main-content">
+          <!-- Título Universitario -->
+          <h2>Detalles del Título</h2>
+
+          <!-- Lista de Asignaturas -->
+          <h3>Asignaturas del Título</h3>
+          <ul>
+            [for (asignatura : Asignatura | t.asignaturas)]
+              <li><a href="A_[asignatura.Nombre.replace(' ', '_')/].html">[asignatura.Nombre/]</a></li>
+            [/for]
+          </ul>
+
+          <!-- Lista de Profesores -->
+          <h3>Profesores que imparten el Título</h3>
+          <ul>
+            [for (profesor : Profesor | t.asignaturas.esimpartidaprofesores)]
+              <li><a href="P_[profesor.Nombre.replace(' ', '_')/].html">[profesor.Nombre/]</a></li>
+            [/for]
+          </ul>
+
+          <!-- Lista de Estudiantes -->
+          <h3>Estudiantes matriculados en el Título</h3>
+          <ul>
+            [for (alumno : Alumno | t.asignaturas.tienealumno)]
+              <li><a href="E_[alumno.Nombre.replace(' ', '_')/].html">[alumno.Nombre/]</a></li>
+            [/for]
+          </ul>
+
+        </div>
+
+        <div class="sidebar">
+          <a href="../index.html">Volver al índice</a>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>Información generada automáticamente.</p>
+      </div>
+    </body>
+    </html>
+  [/file]
+
+[/template]
+
+[template public generateAsignaturaPage(asignatura : Asignatura)]
+  [file (''.concat(asignatura.Nombre.replace(' ', '_').toLowerCase()).concat('.html'), false, 'UTF-8')]
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <title>[asignatura.Nombre/] - Detalles de la Asignatura</title>
+      <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+      <div class="header">
+        <h1>[asignatura.Nombre/]</h1>
+      </div>
+
+      <div class="container">
+        <div class="main-content">
+          <!-- Detalles de la Asignatura -->
+          <h2>Detalles de la Asignatura</h2>
+
+          <!-- Ficha12A -->
+          <h3>Ficha12A: [asignatura.Ficha12a/]</h3>
+
+          <!-- Profesores -->
+          <h3>Profesores que imparten la Asignatura</h3>
+          <ul>
+            [for (profesor : Profesor | asignatura.esimpartidaprofesores)]
+              <li><a href="P_[profesor.Nombre.replace(' ', '_')/].html">[profesor.Nombre/]</a></li>
+            [/for]
+          </ul>
+
+          <!-- Alumnos -->
+          <h3>Alumnos matriculados en la Asignatura</h3>
+          <ul>
+            [for (alumno : Alumno | asignatura.tienealumno)]
+              <li><a href="E_[alumno.Nombre.replace(' ', '_')/].html">[alumno.Nombre/]</a></li>
+            [/for]
+          </ul>
+
+          <!-- Bloques -->
+          <h3>Bloques de la Asignatura</h3>
+          <ul>
+            [for (bloque : Bloque | asignatura.bloques)]
+              <li>
+                [bloque.Nombre/]
+                <!-- Actividades del Bloque -->
+                <ul>
+                  [for (actividad : Actividad | bloque.actividades)]
+                    <li>[actividad.ID/]</li>
+                  [/for]
+                </ul>
+              </li>
+            [/for]
+          </ul>
+
+          <!-- Grupos de trabajo -->
+          <h3>Grupos de trabajo de la Asignatura</h3>
+          [for (configuracion : ConfiguracionGrupos | asignatura.grupostrabajo)]
+            <h4>Configuración de Grupos: [configuracion.ID/]</h4>
+            <ul>
+              [for (grupo : GrupoTrabajo | configuracion.tiene)]
+                <li>[grupo.ID/]</li>
+              [/for]
+            </ul>
+          [/for]
+        </div>
+
+        <div class="sidebar">
+          <a href="../index.html">Volver al índice</a>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>Información generada automáticamente.</p>
+      </div>
+    </body>
+    </html>
+  [/file]
+[/template]
+
+
+[template public generateProfesorPage(profesor : Profesor)]
+  [file (''.concat(profesor.Nombre.replace(' ', '_').toLowerCase()).concat('.html'), false, 'UTF-8')]
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <title>[profesor.Nombre/] - Detalles del Profesor</title>
+      <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+      <div class="header">
+        <h1>[profesor.Nombre/]</h1>
+      </div>
+
+      <div class="container">
+        <div class="main-content">
+          <!-- Detalles del Profesor -->
+          <h2>Detalles del Profesor</h2>
+
+          <!-- Asignaturas que imparte -->
+          <h3>Asignaturas que imparte</h3>
+          <ul>
+            [for (asignatura : Asignatura | profesor.imparteasignaturas)]
+              <li><a href="A_[asignatura.Nombre.replace(' ', '_')/].html">[asignatura.Nombre/]</a></li>
+            [/for]
+          </ul>
+
+          <!-- Asignaturas que coordina -->
+          <h3>Asignaturas que coordina</h3>
+          <ul>
+            [for (asignatura : Asignatura | profesor.escoordinador)]
+              <li><a href="A_[asignatura.Nombre.replace(' ', '_')/].html">[asignatura.Nombre/]</a></li>
+            [/for]
+          </ul>
+
+        </div>
+
+        <div class="sidebar">
+          <a href="../index.html">Volver al índice</a>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>Información generada automáticamente.</p>
+      </div>
+    </body>
+    </html>
+  [/file]
+[/template]
+
+[template public generateAlumnoPage(alumno : Alumno)]
+  [file (''.concat(alumno.Nombre.replace(' ', '_').toLowerCase()).concat('.html'), false, 'UTF-8')]
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <title>[alumno.Nombre/] - Detalles del Alumno</title>
+      <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+      <div class="header">
+        <h1>[alumno.Nombre/]</h1>
+      </div>
+
+      <div class="container">
+        <div class="main-content">
+          <!-- Detalles del Alumno -->
+          <h2>Detalles del Alumno</h2>
+
+          <!-- Asignaturas en las que está matriculado -->
+          <h3>Asignaturas matriculadas</h3>
+          <ul>
+            [for (asignatura : Asignatura | alumno.cursaasignatura)]
+              <li><a href="A_[asignatura.Nombre.replace(' ', '_')/].html">[asignatura.Nombre/]</a></li>
+            [/for]
+          </ul>
+
+          <!-- Grupos de trabajo -->
+          <h3>Grupos de trabajo</h3>
+          <ul>
+            [for (grupo : GrupoTrabajo | alumno.gruposdetrabajo)]
+              <li>[grupo.ID/]</li>
+            [/for]
+          </ul>
+
+        </div>
+
+        <div class="sidebar">
+          <a href="../index.html">Volver al índice</a>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>Información generada automáticamente.</p>
+      </div>
+    </body>
+    </html>
+  [/file]
+[/template]
+
+
+
+

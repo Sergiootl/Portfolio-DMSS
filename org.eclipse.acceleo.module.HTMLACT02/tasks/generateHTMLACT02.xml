@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generateHTMLACT02" name="org.eclipse.acceleo.module.HTMLACT02">
-    <property name="ECLIPSE_HOME" value="../../../../../Downloads/eclipse202312R-DMSS/eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../.."/>
+    <property name="ECLIPSE_HOME" value="../../../../Downloads/eclipse202312R-DMSS/eclipse"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../Desktop/DMSS/workspace"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="org.eclipse.acceleo.module.HTMLACT02.libraryclasspath">
