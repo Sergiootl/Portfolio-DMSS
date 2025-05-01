@@ -476,7 +476,11 @@ button:hover {
             ([subgrupo.alumnosGT->size()/] estudiantes)</strong>
             <ul class="lista-integrantes">
               [for (alumno : Alumno | subgrupo.alumnosGT)]
-                <li><span class="nombre-persona">[alumno.Nombre/]</span></li>
+                <li>
+                  <a href="../../[TituloUniversitario.allInstances()->any(t | t.asignaturas->includes(asignatura)).Nombre.replace(' ', '_').toLowerCase()/]/alumnos/[alumno.Nombre.replace(' ', '_').toLowerCase()/].html">
+                    <span class="nombre-persona">[alumno.Nombre/]</span>
+                  </a>
+                </li>
               [/for]
             </ul>
           </li>
@@ -485,6 +489,7 @@ button:hover {
     </div>
   [/for]
 </div>
+
 
 
 
