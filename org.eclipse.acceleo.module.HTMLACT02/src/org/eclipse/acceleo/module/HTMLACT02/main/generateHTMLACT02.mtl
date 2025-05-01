@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[module generateHTMLACT02('http://www.example.org/dmss_pa_01')]
+
+
+[template public generateHTMLACT02(anUniversidad : Universidad)]
+[comment @main/]
+[file (anUniversidad.Nombre, false, 'UTF-8')]
+
+[/file]
+[/template]
