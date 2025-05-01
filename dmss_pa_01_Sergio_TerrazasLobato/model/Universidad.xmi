@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmss_pa_01:Universidad
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dmss_pa_01="http://www.example.org/dmss_pa_01"
+    xsi:schemaLocation="http://www.example.org/dmss_pa_01 ../metamodel/dmss_pa_01.ecore">
+  <titulosuniversitarios
+      Nombre="Ingeniería Informática en Ingeniería del Software">
+    <asignaturas
+        Nombre="Introducción a la programación"
+        Codigo="1"
+        esimpartidaprofesores="//@profesores.0"
+        Ficha12a="IP"
+        escoordinada="//@profesores.0"
+        tienealumno="//@alumnos.0 //@alumnos.1">
+      <bloques
+          Nombre="TeroriaIP">
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="1"
+            Descripcion="IP_Tema1_Slides"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="2"
+            Descripcion="IP_Tema2_Slides"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="3"
+            Descripcion="IP_Tema2_Video"
+            Visible="true"
+            Extension="MP4"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="4"
+            Descripcion="IP_Tema3_Slides"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="5"
+            Descripcion="IP_Tema4_Slides"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="6"
+            Descripcion="IP_Tema5_Slides"/>
+      </bloques>
+      <bloques
+          Nombre="PortafolioIP">
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="1"
+            Descripcion="IPAct01_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="1"
+            Descripcion="IPAct01_Entrega"
+            Visible="true"
+            NumMax="1"
+            FechaLimite="Fri Mar 05 00:00:00 CET 2025"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="2"
+            Descripcion="IPAct02_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="2"
+            Descripcion="IPAct02_Entrega"
+            Visible="true"
+            NumMax="1"
+            FechaLimite="Fri Mar 19 00:00:00 CET 2025"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="3"
+            Descripcion="IPAct03_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="3"
+            Descripcion="IPAct03_Entrega"
+            NumMax="1"
+            FechaLimite="Tue Apr 06 00:00:00 CET 2025"
+            Calificacion="ESCALA2"/>
+      </bloques>
+      <bloques
+          Nombre="ProyectoIP">
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="1"
+            Descripcion="IP_Proyecto_EntregaJunio"
+            NumMax="1"
+            FechaLimite="Tue May 25 00:00:00 CET 2025"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="2"
+            Descripcion="IP_Proyecto_EntregaJulio"
+            NumMax="1"
+            FechaLimite="Fri Jun 25 00:00:00 CET 2025"/>
+      </bloques>
+      <bloques
+          Nombre="PrácticasIP">
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="1"
+            Descripcion="IPPractica01_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="2"
+            Descripcion="IPPractica02_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="3"
+            Descripcion="IPPractica03_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="4"
+            Descripcion="IPPractica04_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="5"
+            Descripcion="IPPractica05_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="6"
+            Descripcion="IPPractica06_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="7"
+            Descripcion="IPPractica07_Enunciado"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="8"
+            Descripcion="IPPractica08_Enunciado"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="9"
+            Descripcion="IPPractica09_Enunciado"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="10"
+            Descripcion="IPPractica10_Enunciado"/>
+      </bloques>
+      <grupostrabajo
+          ID="Grupos de teoría de IP"
+          Numgrupos="1"
+          NumMaxEstu="80">
+        <tiene
+            ID="IP_GT01"
+            alumnosGT="//@alumnos.0"
+            Descripcion="IP - Grupo de teoría 1"/>
+        <tiene
+            ID="IP_GT02"
+            alumnosGT="//@alumnos.1"
+            Descripcion="IP - Grupo de teoría 1"/>
+      </grupostrabajo>
+      <grupostrabajo
+          ID="Grupos de prácticas de IP"
+          Numgrupos="2"
+          NumMaxEstu="15">
+        <tiene
+            ID="IP_GP01"
+            alumnosGT="//@alumnos.0"
+            Descripcion="Grupo 1 de prácticas"/>
+        <tiene
+            ID="IP_GP02"
+            alumnosGT="//@alumnos.1"
+            Descripcion="Grupo 2 de prácticas"/>
+      </grupostrabajo>
+    </asignaturas>
+    <asignaturas
+        Nombre="Diseño y modelado de sistemas software"
+        Codigo="4"
+        esimpartidaprofesores="//@profesores.4 //@profesores.1"
+        Ficha12a="DMSS"
+        escoordinada="//@profesores.4"
+        tienealumno="//@alumnos.2 //@alumnos.3 //@alumnos.0 //@alumnos.4 //@alumnos.5">
+      <bloques
+          Nombre="TeroriaDMSS">
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="1"
+            Descripcion="DMSS_Tema1_Slides"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="2"
+            Descripcion="DMSS_Tema2_Slides"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="3"
+            Descripcion="DMSS_Tema2_Video"
+            Visible="true"
+            Extension="MP4"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="4"
+            Descripcion="DMSS_Tema3_Slides"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="5"
+            Descripcion="DMSS_Tema4_Slides"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="6"
+            Descripcion="DMSS_Tema5_Slides"/>
+      </bloques>
+      <bloques
+          Nombre="PortafolioDMSS">
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="1"
+            Descripcion="DMSSAct01_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="1"
+            Descripcion="DMSSAct01_Entrega"
+            Visible="true"
+            NumMax="1"
+            FechaLimite="Fri Mar 05 00:00:00 CET 2025"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="2"
+            Descripcion="DMSSAct02_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="2"
+            Descripcion="DMSSAct02_Entrega"
+            Visible="true"
+            NumMax="1"
+            FechaLimite="Fri Mar 19 00:00:00 CET 2025"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="3"
+            Descripcion="DMSSAct03_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="3"
+            Descripcion="DMSSAct03_Entrega"
+            NumMax="1"
+            FechaLimite="Tue Apr 06 00:00:00 CET 2025"
+            Calificacion="ESCALA2"/>
+      </bloques>
+      <bloques
+          Nombre="ProyectoDMSS">
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="1"
+            Descripcion="DMSS_Proyecto_EntregaJunio"
+            NumMax="1"
+            FechaLimite="Tue May 25 00:00:00 CET 2025"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="2"
+            Descripcion="DMSS_Proyecto_EntregaJulio"
+            NumMax="1"
+            FechaLimite="Fri Jun 25 00:00:00 CET 2025"/>
+      </bloques>
+      <bloques
+          Nombre="PrácticasDMSS">
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="1"
+            Descripcion="DMSSPractica01_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="2"
+            Descripcion="DMSSPractica02_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="3"
+            Descripcion="DMSSPractica03_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="4"
+            Descripcion="DMSSPractica04_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="5"
+            Descripcion="DMSSPractica05_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="6"
+            Descripcion="DMSSPractica06_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="7"
+            Descripcion="DMSSPractica07_Enunciado"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="8"
+            Descripcion="DMSSPractica08_Enunciado"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="9"
+            Descripcion="DMSSPractica09_Enunciado"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="10"
+            Descripcion="DMSSPractica10_Enunciado"/>
+      </bloques>
+      <grupostrabajo
+          ID="Grupos de teoría de DMSS"
+          Numgrupos="1"
+          NumMaxEstu="80">
+        <tiene
+            ID="DMSS_GT01"
+            alumnosGT="//@alumnos.0 //@alumnos.2 //@alumnos.3 //@alumnos.4 //@alumnos.5"
+            Descripcion="DMSS - Grupo único de teoría"/>
+      </grupostrabajo>
+      <grupostrabajo
+          ID="Grupos de prácticas de DMSS"
+          Numgrupos="2"
+          NumMaxEstu="15">
+        <tiene
+            ID="DMSS_GP01"
+            alumnosGT="//@alumnos.0 //@alumnos.5"
+            Descripcion="Grupo 1 de prácticas"/>
+        <tiene
+            ID="DMSS_GP02"
+            alumnosGT="//@alumnos.2 //@alumnos.3 //@alumnos.4"
+            Descripcion="Grupo 2 de prácticas"/>
+      </grupostrabajo>
+    </asignaturas>
+    <asignaturas
+        Nombre="Programación en Internet"
+        Codigo="2"
+        esimpartidaprofesores="//@profesores.3"
+        Ficha12a="PI"
+        escoordinada="//@profesores.3"
+        tienealumno="//@alumnos.5 //@alumnos.1">
+      <bloques
+          Nombre="TeroriaPI">
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="1"
+            Descripcion="PI_Tema1_Slides"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="2"
+            Descripcion="PI_Tema2_Slides"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="3"
+            Descripcion="PI_Tema2_Video"
+            Visible="true"
+            Extension="MP4"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="4"
+            Descripcion="PI_Tema3_Slides"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="5"
+            Descripcion="PI_Tema4_Slides"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="6"
+            Descripcion="PI_Tema5_Slides"/>
+      </bloques>
+      <bloques
+          Nombre="PortafolioPI">
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="1"
+            Descripcion="PIAct01_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="1"
+            Descripcion="PIAct01_Entrega"
+            Visible="true"
+            NumMax="1"
+            FechaLimite="Fri Mar 05 00:00:00 CET 2025"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="2"
+            Descripcion="PIAct02_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="2"
+            Descripcion="PIAct02_Entrega"
+            Visible="true"
+            NumMax="1"
+            FechaLimite="Fri Mar 19 00:00:00 CET 2025"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="3"
+            Descripcion="PIAct03_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="3"
+            Descripcion="PIAct03_Entrega"
+            NumMax="1"
+            FechaLimite="Tue Apr 06 00:00:00 CET 2025"
+            Calificacion="ESCALA2"/>
+      </bloques>
+      <bloques
+          Nombre="ProyectoPI">
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="1"
+            Descripcion="PI_Proyecto_EntregaJunio"
+            NumMax="1"
+            FechaLimite="Tue May 25 00:00:00 CET 2025"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="2"
+            Descripcion="PI_Proyecto_EntregaJulio"
+            NumMax="1"
+            FechaLimite="Fri Jun 25 00:00:00 CET 2025"/>
+      </bloques>
+      <bloques
+          Nombre="PrácticasPI">
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="1"
+            Descripcion="PIPractica01_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="2"
+            Descripcion="PIPractica02_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="3"
+            Descripcion="PIPractica03_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="4"
+            Descripcion="PIPractica04_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="5"
+            Descripcion="PIPractica05_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="6"
+            Descripcion="PIPractica06_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="7"
+            Descripcion="PIPractica07_Enunciado"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="8"
+            Descripcion="PIPractica08_Enunciado"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="9"
+            Descripcion="PIPractica09_Enunciado"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="10"
+            Descripcion="PIPractica10_Enunciado"/>
+      </bloques>
+      <grupostrabajo
+          ID="Grupos de teoría de PI"
+          Numgrupos="1"
+          NumMaxEstu="80">
+        <tiene
+            ID="PI_GT01"
+            alumnosGT="//@alumnos.5 //@alumnos.1"
+            Descripcion="PI- Grupo único de teoría"/>
+      </grupostrabajo>
+      <grupostrabajo
+          ID="Grupos de prácticas de PI"
+          Numgrupos="2"
+          NumMaxEstu="15">
+        <tiene
+            ID="PI_GP01"
+            alumnosGT="//@alumnos.5"
+            Descripcion="Grupo 1 de prácticas"/>
+        <tiene
+            ID="PI_GP02"
+            alumnosGT="//@alumnos.1"
+            Descripcion="Grupo 2 de prácticas"/>
+      </grupostrabajo>
+    </asignaturas>
+    <asignaturas
+        Nombre="Teoría de lenguajes"
+        Codigo="3"
+        esimpartidaprofesores="//@profesores.2 //@profesores.1"
+        Ficha12a="TL"
+        escoordinada="//@profesores.2"
+        tienealumno="//@alumnos.4 //@alumnos.5 //@alumnos.1">
+      <bloques
+          Nombre="TeroriaTL">
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="1"
+            Descripcion="TL_Tema1_Slides"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="2"
+            Descripcion="TL_Tema2_Slides"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="3"
+            Descripcion="TL_Tema2_Video"
+            Visible="true"
+            Extension="MP4"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="4"
+            Descripcion="TL_Tema3_Slides"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="5"
+            Descripcion="TL_Tema4_Slides"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="6"
+            Descripcion="TL_Tema5_Slides"/>
+      </bloques>
+      <bloques
+          Nombre="PortafolioTL">
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="1"
+            Descripcion="TLAct01_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="1"
+            Descripcion="TLAct01_Entrega"
+            Visible="true"
+            NumMax="1"
+            FechaLimite="Fri Mar 05 00:00:00 CET 2025"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="2"
+            Descripcion="TLAct02_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="2"
+            Descripcion="TLAct02_Entrega"
+            Visible="true"
+            NumMax="1"
+            FechaLimite="Fri Mar 19 00:00:00 CET 2025"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="3"
+            Descripcion="TLAct03_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="3"
+            Descripcion="TLAct03_Entrega"
+            NumMax="1"
+            FechaLimite="Tue Apr 06 00:00:00 CET 2025"
+            Calificacion="ESCALA2"/>
+      </bloques>
+      <bloques
+          Nombre="ProyectoTL">
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="1"
+            Descripcion="TL_Proyecto_EntregaJunio"
+            NumMax="1"
+            FechaLimite="Tue May 25 00:00:00 CET 2025"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="2"
+            Descripcion="TL_Proyecto_EntregaJulio"
+            NumMax="1"
+            FechaLimite="Fri Jun 25 00:00:00 CET 2025"/>
+      </bloques>
+      <bloques
+          Nombre="PrácticasTL">
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="1"
+            Descripcion="TLPractica01_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="2"
+            Descripcion="TLPractica02_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="3"
+            Descripcion="TLPractica03_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="4"
+            Descripcion="TLPractica04_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="5"
+            Descripcion="TLPractica05_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="6"
+            Descripcion="TLPractica06_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="7"
+            Descripcion="TLPractica07_Enunciado"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="8"
+            Descripcion="TLPractica08_Enunciado"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="9"
+            Descripcion="TLPractica09_Enunciado"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="10"
+            Descripcion="TLPractica10_Enunciado"/>
+      </bloques>
+      <grupostrabajo
+          ID="Grupos de teoría de TL"
+          Numgrupos="1"
+          NumMaxEstu="80">
+        <tiene
+            ID="TL_GT01"
+            alumnosGT="//@alumnos.4 //@alumnos.5 //@alumnos.1"
+            Descripcion="TL - Grupo único de teoría"/>
+      </grupostrabajo>
+      <grupostrabajo
+          ID="Grupos de prácticas de TL"
+          Numgrupos="2"
+          NumMaxEstu="15">
+        <tiene
+            ID="TL_GP01"
+            alumnosGT="//@alumnos.5"
+            Descripcion="Grupo 1 de prácticas"/>
+        <tiene
+            ID="TL_GP02"
+            alumnosGT="//@alumnos.4"
+            Descripcion="Grupo 2 de prácticas"/>
+      </grupostrabajo>
+    </asignaturas>
+  </titulosuniversitarios>
+  <titulosuniversitarios
+      Nombre="Ingeniería Informática en Ingeniería de Computadores">
+    <asignaturas
+        Nombre="Introducción a los computadores"
+        Codigo="1"
+        esimpartidaprofesores="//@profesores.5"
+        Ficha12a="IC"
+        escoordinada="//@profesores.5"
+        tienealumno="//@alumnos.6">
+      <bloques
+          Nombre="TeroriaIC">
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="1"
+            Descripcion="IC_Tema1_Slides"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="2"
+            Descripcion="IC_Tema2_Slides"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="3"
+            Descripcion="IC_Tema2_Video"
+            Visible="true"
+            Extension="MP4"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="4"
+            Descripcion="IC_Tema3_Slides"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="5"
+            Descripcion="IC_Tema4_Slides"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="6"
+            Descripcion="IC_Tema5_Slides"/>
+      </bloques>
+      <bloques
+          Nombre="PortafolioIC">
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="1"
+            Descripcion="ICAct01_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="1"
+            Descripcion="ICAct01_Entrega"
+            Visible="true"
+            NumMax="1"
+            FechaLimite="Fri Mar 05 00:00:00 CET 2025"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="2"
+            Descripcion="ICAct02_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="2"
+            Descripcion="ICAct02_Entrega"
+            Visible="true"
+            NumMax="1"
+            FechaLimite="Fri Mar 19 00:00:00 CET 2025"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="3"
+            Descripcion="ICAct03_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="3"
+            Descripcion="ICAct03_Entrega"
+            NumMax="1"
+            FechaLimite="Tue Apr 06 00:00:00 CET 2025"
+            Calificacion="ESCALA2"/>
+      </bloques>
+      <bloques
+          Nombre="ProyectoIC">
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="1"
+            Descripcion="IC_Proyecto_EntregaJunio"
+            NumMax="1"
+            FechaLimite="Tue May 25 00:00:00 CET 2025"/>
+        <actividades
+            xsi:type="dmss_pa_01:Tarea"
+            ID="2"
+            Descripcion="IC_Proyecto_EntregaJulio"
+            NumMax="1"
+            FechaLimite="Fri Jun 25 00:00:00 CET 2025"/>
+      </bloques>
+      <bloques
+          Nombre="PrácticasIC">
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="1"
+            Descripcion="ICPractica01_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="2"
+            Descripcion="ICPractica02_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="3"
+            Descripcion="ICPractica03_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="4"
+            Descripcion="ICPractica04_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="5"
+            Descripcion="ICPractica05_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="6"
+            Descripcion="ICPractica06_Enunciado"
+            Visible="true"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="7"
+            Descripcion="ICPractica07_Enunciado"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="8"
+            Descripcion="ICPractica08_Enunciado"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="9"
+            Descripcion="ICPractica09_Enunciado"/>
+        <actividades
+            xsi:type="dmss_pa_01:Recurso"
+            ID="10"
+            Descripcion="ICPractica10_Enunciado"/>
+      </bloques>
+      <grupostrabajo
+          ID="Grupos de teoría de IC"
+          Numgrupos="1"
+          NumMaxEstu="80">
+        <tiene
+            ID="IC_GT01"
+            alumnosGT="//@alumnos.6"
+            Descripcion="IC - Grupo de teoría 1"/>
+      </grupostrabajo>
+      <grupostrabajo
+          ID="Grupos de prácticas de IC"
+          Numgrupos="2"
+          NumMaxEstu="15">
+        <tiene
+            ID="IC_GP01"
+            alumnosGT="//@alumnos.6"
+            Descripcion="Grupo 1 de prácticas"/>
+      </grupostrabajo>
+    </asignaturas>
+  </titulosuniversitarios>
+  <alumnos Nombre="Ana López Pérez"
+      matriculadoenTU="//@titulosuniversitarios.0"
+      cursaasignatura="//@titulosuniversitarios.0/@asignaturas.0 //@titulosuniversitarios.0/@asignaturas.1"
+      gruposdetrabajo="//@titulosuniversitarios.0/@asignaturas.1/@grupostrabajo.0/@tiene.0 //@titulosuniversitarios.0/@asignaturas.1/@grupostrabajo.1/@tiene.0 //@titulosuniversitarios.0/@asignaturas.0/@grupostrabajo.0/@tiene.0 //@titulosuniversitarios.0/@asignaturas.0/@grupostrabajo.1/@tiene.0"/>
+  <alumnos Nombre="Carlos García Santamaria"
+      matriculadoenTU="//@titulosuniversitarios.0"
+      cursaasignatura="//@titulosuniversitarios.0/@asignaturas.2 //@titulosuniversitarios.0/@asignaturas.0 //@titulosuniversitarios.0/@asignaturas.3"
+      gruposdetrabajo="//@titulosuniversitarios.0/@asignaturas.0/@grupostrabajo.0/@tiene.1 //@titulosuniversitarios.0/@asignaturas.0/@grupostrabajo.1/@tiene.1 //@titulosuniversitarios.0/@asignaturas.2/@grupostrabajo.0/@tiene.0 //@titulosuniversitarios.0/@asignaturas.2/@grupostrabajo.1/@tiene.1 //@titulosuniversitarios.0/@asignaturas.3/@grupostrabajo.0/@tiene.0"/>
+  <alumnos Nombre="Carmen Rodríguez López"
+      matriculadoenTU="//@titulosuniversitarios.0"
+      cursaasignatura="//@titulosuniversitarios.0/@asignaturas.1"
+      gruposdetrabajo="//@titulosuniversitarios.0/@asignaturas.1/@grupostrabajo.0/@tiene.0 //@titulosuniversitarios.0/@asignaturas.1/@grupostrabajo.1/@tiene.1"/>
+  <alumnos Nombre="Isabel Carmona Ruiz"
+      matriculadoenTU="//@titulosuniversitarios.0"
+      cursaasignatura="//@titulosuniversitarios.0/@asignaturas.1"
+      gruposdetrabajo="//@titulosuniversitarios.0/@asignaturas.1/@grupostrabajo.0/@tiene.0 //@titulosuniversitarios.0/@asignaturas.1/@grupostrabajo.1/@tiene.1"/>
+  <alumnos Nombre="Ivan Rubio Salgado"
+      matriculadoenTU="//@titulosuniversitarios.0"
+      cursaasignatura="//@titulosuniversitarios.0/@asignaturas.3 //@titulosuniversitarios.0/@asignaturas.1"
+      gruposdetrabajo="//@titulosuniversitarios.0/@asignaturas.1/@grupostrabajo.0/@tiene.0 //@titulosuniversitarios.0/@asignaturas.1/@grupostrabajo.1/@tiene.1 //@titulosuniversitarios.0/@asignaturas.3/@grupostrabajo.0/@tiene.0 //@titulosuniversitarios.0/@asignaturas.3/@grupostrabajo.1/@tiene.1"/>
+  <alumnos Nombre="Joaquín Robles Sánchez"
+      matriculadoenTU="//@titulosuniversitarios.0"
+      cursaasignatura="//@titulosuniversitarios.0/@asignaturas.2 //@titulosuniversitarios.0/@asignaturas.3 //@titulosuniversitarios.0/@asignaturas.1"
+      gruposdetrabajo="//@titulosuniversitarios.0/@asignaturas.1/@grupostrabajo.0/@tiene.0 //@titulosuniversitarios.0/@asignaturas.1/@grupostrabajo.1/@tiene.0 //@titulosuniversitarios.0/@asignaturas.2/@grupostrabajo.0/@tiene.0 //@titulosuniversitarios.0/@asignaturas.2/@grupostrabajo.1/@tiene.0 //@titulosuniversitarios.0/@asignaturas.3/@grupostrabajo.0/@tiene.0 //@titulosuniversitarios.0/@asignaturas.3/@grupostrabajo.1/@tiene.0"/>
+  <alumnos Nombre="Jagoba Arrasate"
+      matriculadoenTU="//@titulosuniversitarios.1"
+      cursaasignatura="//@titulosuniversitarios.1/@asignaturas.0"
+      gruposdetrabajo="//@titulosuniversitarios.1/@asignaturas.0/@grupostrabajo.1/@tiene.0 //@titulosuniversitarios.1/@asignaturas.0/@grupostrabajo.0/@tiene.0"/>
+  <profesores
+      Nombre="Alberto Gómez"
+      imparteasignaturas="//@titulosuniversitarios.0/@asignaturas.0"
+      escoordinador="//@titulosuniversitarios.0/@asignaturas.0"/>
+  <profesores
+      Nombre="Cristina Vicente"
+      imparteasignaturas="//@titulosuniversitarios.0/@asignaturas.3 //@titulosuniversitarios.0/@asignaturas.1"/>
+  <profesores
+      Nombre="Elena Jurado"
+      imparteasignaturas="//@titulosuniversitarios.0/@asignaturas.3"
+      escoordinador="//@titulosuniversitarios.0/@asignaturas.3"/>
+  <profesores
+      Nombre="Jose M. Conejero"
+      imparteasignaturas="//@titulosuniversitarios.0/@asignaturas.2"
+      escoordinador="//@titulosuniversitarios.0/@asignaturas.2"/>
+  <profesores
+      Nombre="Pedro J. Clemente"
+      imparteasignaturas="//@titulosuniversitarios.0/@asignaturas.1"
+      escoordinador="//@titulosuniversitarios.0/@asignaturas.1"/>
+  <profesores
+      Nombre="Pedro Luis Aguilar"
+      imparteasignaturas="//@titulosuniversitarios.1/@asignaturas.0"
+      escoordinador="//@titulosuniversitarios.1/@asignaturas.0"/>
+</dmss_pa_01:Universidad>
