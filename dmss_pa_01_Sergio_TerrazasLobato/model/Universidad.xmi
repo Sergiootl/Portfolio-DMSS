@@ -7,7 +7,8 @@
     xsi:schemaLocation="http://www.example.org/dmss_pa_01 ../metamodel/dmss_pa_01.ecore"
     Nombre="Universidad de Extremadura">
   <titulosuniversitarios
-      Nombre="Ingeniería Informática en Ingeniería del Software">
+      Nombre="Ingeniería Informática en Ingeniería del Software"
+      ShortName="GIIIS">
     <asignaturas
         Nombre="Introducción a la programación"
         Codigo="1"
@@ -674,7 +675,8 @@
     </asignaturas>
   </titulosuniversitarios>
   <titulosuniversitarios
-      Nombre="Ingeniería Informática en Ingeniería de Computadores">
+      Nombre="Ingeniería Informática en Ingeniería de Computadores"
+      ShortName="GIIIC">
     <asignaturas
         Nombre="Introducción a los computadores"
         Codigo="1"
